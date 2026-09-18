@@ -157,7 +157,6 @@ h1{
   gap:16px 48px;
   margin-top:46px;
 }
-.work-columns .dropdown{ margin-top:0; }
 
 @media (max-width:760px){
   .work-columns{ grid-template-columns:1fr; gap:0; }
@@ -225,11 +224,33 @@ a.proj-name:hover .verify-arrow{ color:var(--amber); }
 .dropdown[open] summary::after{ content:"–"; }
 .dropdown .log{ margin-top:14px; }
 
-/* ---------- Category box (bigger, equal size, with art) ---------- */
-.cat-box{ padding:22px 24px; }
-.cat-box summary{ position:relative; min-height:76px; }
+/* ---------- Category box (bigger, equal size, with art) — links to full pages ---------- */
+.cat-box{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  min-height:76px;
+  padding:22px 24px;
+  border:1px solid var(--line);
+  background:var(--surface);
+  border-radius:4px;
+  text-decoration:none;
+  transition:border-color .15s ease, background-color .15s ease;
+}
+.cat-box:hover{ border-color:var(--amber); background:var(--surface-2); }
 .cat-box .cat-label{ position:relative; z-index:1; }
-.cat-box summary::after{ position:relative; z-index:1; }
+.cat-box .cat-arrow{
+  position:relative;
+  z-index:1;
+  flex:none;
+  font-family:var(--mono);
+  font-size:15px;
+  color:var(--ink-faint);
+  transition:color .15s ease, transform .15s ease;
+}
+.cat-box:hover .cat-arrow{ color:var(--amber); transform:translateX(3px); }
 .cat-art{
   position:absolute;
   top:0; right:-8px; bottom:0;
@@ -247,7 +268,7 @@ a.proj-name:hover .verify-arrow{ color:var(--amber); }
 
 @media (max-width:560px){
   .cat-art{ display:none; }
-  .cat-box summary{ min-height:0; }
+  .cat-box{ min-height:0; }
 }
 
 /* ---------- Project log ---------- */
