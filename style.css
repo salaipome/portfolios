@@ -250,7 +250,7 @@ a.proj-name:hover .verify-arrow{ color:var(--amber); }
   box-shadow:0 8px 20px rgba(0,0,0,.28);
   transform:translateY(-2px);
 }
-.cat-label{ position:relative; z-index:1; font-size:15px; }
+.cat-label{ position:relative; z-index:1; }
 .cat-box .cat-arrow{
   position:relative;
   z-index:1;
