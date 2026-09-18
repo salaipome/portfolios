@@ -224,6 +224,11 @@ a.proj-name:hover .verify-arrow{ color:var(--amber); }
 .dropdown[open] summary::after{ content:"–"; }
 .dropdown .log{ margin-top:14px; }
 
+/* ---------- Dropdown with background art (Skills, Education) ---------- */
+.dropdown.has-art{ padding:22px 24px; }
+.dropdown.has-art summary{ position:relative; min-height:76px; }
+.dropdown.has-art summary::after{ position:relative; z-index:1; }
+
 /* ---------- Category box (bigger, equal size, with art) — links to full pages ---------- */
 .cat-box{
   position:relative;
@@ -240,7 +245,7 @@ a.proj-name:hover .verify-arrow{ color:var(--amber); }
   transition:border-color .15s ease, background-color .15s ease;
 }
 .cat-box:hover{ border-color:var(--amber); background:var(--surface-2); }
-.cat-box .cat-label{ position:relative; z-index:1; }
+.cat-label{ position:relative; z-index:1; }
 .cat-box .cat-arrow{
   position:relative;
   z-index:1;
@@ -269,6 +274,7 @@ a.proj-name:hover .verify-arrow{ color:var(--amber); }
 @media (max-width:560px){
   .cat-art{ display:none; }
   .cat-box{ min-height:0; }
+  .dropdown.has-art summary{ min-height:0; }
 }
 
 /* ---------- Project log ---------- */
